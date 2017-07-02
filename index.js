@@ -5,12 +5,12 @@ const rp        = require('request-promise');
 const q         = require('q');
 
 const app = express();
-const search = 'Toothonius-1398'
+const battleTag = 'Toothonius-1398'
 
 const requestParams = {
   method: 'GET'
 , url: ''
-, json: true
+// , json: true
 , qs: {
     
     // EVENTUALLY CHANGE LOCALE (should default to US)
@@ -23,18 +23,18 @@ const requestParams = {
 // get account info
 app.get('/account', function(req, res) {
   const deferred  = q.defer();
-  let battleTag   = req.query.tag;
+  //let battleTag   = req.query.tag;
   let reqParams   = requestParams;
   reqParams.url   = 'https://us.api.battle.net/d3/profile/' + battleTag + '/';
   
   rp(reqParams)
   .then(function(data) {
-    console.log(data);
-    deferred.resolve(data);
+    //console.log('data: ', data);
+    deferred.resolve(res.send({data: data}));
   })
   .catch(function(err) {
-    console.log('error in get account info');
-    deferred.reject(err);
+    console.log('error in get account info', err);
+    deferred.reject(res.send({err: err}) );
   })
   
   return deferred.promise;
@@ -57,6 +57,8 @@ app.get('/character', function(req, res) {
     console.log('error in get single char',err);
     deferred.reject(err);
   });
+
+  return deffered.promise;
 });
 
 const port = process.env.PORT || 9001;
