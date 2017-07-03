@@ -4,13 +4,13 @@ const request   = require('request');
 const rp        = require('request-promise');
 const q         = require('q');
 
-const app = express();
-const battleTag = 'Toothonius-1398'
+const app         = express();
+const battleTag   = 'Toothonius-1398'
 
 const requestParams = {
   method: 'GET'
 , url: ''
-// , json: true
+, json: true
 , qs: {
     
     // EVENTUALLY CHANGE LOCALE (should default to US)
