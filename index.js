@@ -29,8 +29,8 @@ app.get('/account', function(req, res) {
   
   rp(reqParams)
   .then(function(data) {
-    //console.log('data: ', data);
-    deferred.resolve(res.send({data: data}));
+    let appData = pruneAcctData(data);
+    deferred.resolve(res.send({data: appData}));
   })
   .catch(function(err) {
     console.log('error in get account info', err);
@@ -49,11 +49,11 @@ app.get('/character', function(req, res) {
   reqParams.url   = 'https://us.api.battle.net/d3/profile/' + battleTag + '/hero/' + charId
   
   rp(reqParams)
-  .then(function(data){
+  .then(function(data) {
     console.log(data);
     deferred.resolve(data);
   })
-  .catch(function(err){
+  .catch(function(err) {
     console.log('error in get single char',err);
     deferred.reject(err);
   });
@@ -66,3 +66,14 @@ const port = process.env.PORT || 9001;
 app.listen(port, function() {
   console.log(`express app listening on port ${port}`);
 });
+
+function pruneAcctData(data) {
+  return {
+    battleTag               : data.battleTag
+  , guildName               : data.guildName
+  , heroes                  : data.heroes
+  , highestHardcoreLevel    : data.highestHardcoreLevel
+  , paragonLevel            : data.paragonLevel
+  , timePlayed              : data.timePlayed
+  };
+}
