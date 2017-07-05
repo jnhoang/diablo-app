@@ -6,12 +6,16 @@ import {
 
 import './App.css';
 import Home from './Home';
+import Char from './character/Char';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={Home}/>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route path="/character/:id" component={Char} />
+        </div>
       </Router>
     );
   }

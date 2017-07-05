@@ -17,14 +17,11 @@ class Home extends Component {
 	}
 	render() {
     let info = this.state.acctInfo;
-		console.log(info)
+    
     return (
       <div>
         <h1>{info ? info.battleTag : "Loading" }</h1>
-        {info 
-          ? info.heroes.map( (hero, index) => <Hero hero={hero} key={index} /> )
-          : null
-        }
+        <div>{ info ? info.heroes.map( (hero, idx) => <Hero hero={hero} key={idx} /> ) : null }</div>
       </div>
 		);
 	}
