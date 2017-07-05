@@ -8,12 +8,6 @@ import './App.css';
 import Home from './Home';
 
 class App extends Component {
-  // componentDidMount() {
-  //   fetch('/account')
-  //   .then(  (data) => data.json() )
-  //   .then(  (json) => console.log(json) )
-  //   .catch( (err)  => console.log(err) );
-  // }
   render() {
     return (
       <Router>

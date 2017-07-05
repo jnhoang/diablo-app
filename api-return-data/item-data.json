@@ -1,0 +1,118 @@
+{
+    "id": "Unique_Boots_007_p2",
+    "name": "Fire Walkers",
+    "icon": "unique_boots_007_p2_demonhunter_male",
+    "displayColor": "orange",
+    "tooltipParams": "item/fire-walkers",
+    "requiredLevel": 50,
+    "itemLevel": 51,
+    "stackSizeMax": 0,
+    "bonusAffixes": 3,
+    "bonusAffixesMax": 3,
+    "accountBound": true,
+    "flavorText": "Tradition has it that these boots were forged in the heart of the great Challsop Volcano.",
+    "typeName": "Legendary Boots",
+    "type": {
+        "twoHanded": false,
+        "id": "Boots"
+    },
+    "damageRange": "0–0 Damage",
+    "armor": {
+        "min": 280.0,
+        "max": 308.0
+    },
+    "slots": ["feet"],
+    "attributes": {
+        "primary": [{
+            "color": "blue",
+            "text": "+10–12% Movement Speed",
+            "affixType": "utility"
+        }],
+        "secondary": [],
+        "passive": [{
+            "color": "orange",
+            "text": "Burn the ground you walk on, dealing 300–400% weapon damage each second.",
+            "affixType": "default"
+        }]
+    },
+    "attributesRaw": {
+        "Movement_Scalar": {
+            "min": 0.1,
+            "max": 0.12
+        },
+        "Item_Power_Passive#ItemPassive_Unique_Boots_007_p2": {
+            "min": 3.0,
+            "max": 4.0
+        },
+        "Durability_Cur": {
+            "min": 450.0,
+            "max": 900.0
+        },
+        "Armor_Item": {
+            "min": 280.0,
+            "max": 308.0
+        },
+        "Durability_Max": {
+            "min": 450.0,
+            "max": 900.0
+        }
+    },
+    "randomAffixes": [{
+        "oneOf": [{
+            "attributes": {
+                "primary": [{
+                    "color": "blue",
+                    "text": "+160–179 Dexterity",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Dexterity_Item": {
+                    "min": 160.0,
+                    "max": 179.0
+                }
+            }
+        }, {
+            "attributes": {
+                "primary": [{
+                    "color": "blue",
+                    "text": "+160–179 Strength",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Strength_Item": {
+                    "min": 160.0,
+                    "max": 179.0
+                }
+            }
+        }, {
+            "attributes": {
+                "primary": [{
+                    "color": "blue",
+                    "text": "+160–179 Intelligence",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Intelligence_Item": {
+                    "min": 160.0,
+                    "max": 179.0
+                }
+            }
+        }]
+    }],
+    "gems": [],
+    "socketEffects": [],
+    "craftedBy": [],
+    "seasonRequiredToDrop": -1,
+    "isSeasonRequiredToDrop": false,
+    "description": null,
+    "blockChance": "+0.0% Chance to Block"
+}

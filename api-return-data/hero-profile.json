@@ -1,0 +1,699 @@
+{
+    "id": 90575649,
+    "name": "Astreyarch",
+    "class": "barbarian",
+    "gender": 0,
+    "level": 60,
+    "kills": {
+        "elites": 1939
+    },
+    "paragonLevel": 12,
+    "hardcore": false,
+    "seasonal": false,
+    "seasonCreated": 0,
+    "skills": {
+        "active": [{
+            "skill": {
+                "slug": "bash",
+                "name": "Bash",
+                "icon": "barbarian_bash",
+                "level": 1,
+                "categorySlug": "primary",
+                "tooltipUrl": "skill/barbarian/bash",
+                "description": "Generate: 6 Fury per attack\r\n\r\nBrutally smash an enemy for 320% weapon damage.",
+                "simpleDescription": "Generate: 6 Fury per attack\r\n\r\nBrutally strike a single enemy.",
+                "skillCalcId": "a"
+            },
+            "rune": {
+                "slug": "bash-b",
+                "type": "b",
+                "name": "Punish",
+                "level": 26,
+                "description": "Increase your damage by 4% for 5 seconds after using Bash. This effect stacks up to 3 times.",
+                "simpleDescription": "Increase your damage for a short time after using Bash.",
+                "tooltipParams": "rune/bash/b",
+                "skillCalcId": "b",
+                "order": 2
+            }
+        }, {
+            "skill": {
+                "slug": "hammer-of-the-ancients",
+                "name": "Hammer of the Ancients",
+                "icon": "barbarian_hammeroftheancients",
+                "level": 2,
+                "categorySlug": "secondary",
+                "tooltipUrl": "skill/barbarian/hammer-of-the-ancients",
+                "description": "Cost: 20 Fury\r\n\r\nCall forth a massive hammer to smash enemies directly in front of you for 535% weapon damage. Hammer of the Ancients has a 1% increased Critical Hit Chance for every 5 Fury that you have.",
+                "simpleDescription": "Cost: 20 Fury\r\n\r\nCall down a mystical hammer and smash groups of enemies.",
+                "skillCalcId": "Z"
+            },
+            "rune": {
+                "slug": "hammer-of-the-ancients-a",
+                "type": "a",
+                "name": "Smash",
+                "level": 15,
+                "description": "Smash for 640% weapon damage as Fire.",
+                "simpleDescription": "Smash for additional damage.",
+                "tooltipParams": "rune/hammer-of-the-ancients/a",
+                "skillCalcId": "Z",
+                "order": 1
+            }
+        }, {
+            "skill": {
+                "slug": "revenge",
+                "name": "Revenge",
+                "icon": "barbarian_revenge",
+                "level": 13,
+                "categorySlug": "might",
+                "tooltipUrl": "skill/barbarian/revenge",
+                "description": "Cost: 1 charge\r\n\r\nDeal 300% weapon damage to all nearby enemies. You heal 4% of your maximum Life for each enemy hit.\r\n\r\nRevenge has a 15% chance to gain a charge each time you are hit. Maximum 2 charges.",
+                "simpleDescription": "Cost: 1 charge\r\n\r\nRelease a retaliatory attack that heals you with each enemy hit.\r\n\r\nRevenge has a chance to gain a charge when you are hit. Maximum 2 charges.",
+                "skillCalcId": "V"
+            },
+            "rune": {
+                "slug": "revenge-d",
+                "type": "d",
+                "name": "Blood Law",
+                "level": 19,
+                "description": "Increase healing to 6% of maximum Life for each enemy hit.",
+                "simpleDescription": "Gain additional Life when Revenge is used.",
+                "tooltipParams": "rune/revenge/d",
+                "skillCalcId": "a",
+                "order": 0
+            }
+        }, {
+            "skill": {
+                "slug": "rend",
+                "name": "Rend",
+                "icon": "barbarian_rend",
+                "level": 5,
+                "categorySlug": "secondary",
+                "tooltipUrl": "skill/barbarian/rend",
+                "description": "Cost: 20 Fury\r\n\r\nA sweeping strike causes all enemies within 12 yards to Bleed for 1100% weapon damage as Physical over 5 seconds.",
+                "simpleDescription": "Cost: 20 Fury\r\n\r\nWound nearby enemies and cause them to Bleed for 5 seconds.",
+                "skillCalcId": "c"
+            },
+            "rune": {
+                "slug": "rend-d",
+                "type": "d",
+                "name": "Blood Lust",
+                "level": 19,
+                "description": "Heal for 0.5% of your maximum Life per second for each affected enemy.",
+                "simpleDescription": "Gain Life when you damage enemies with Rend.",
+                "tooltipParams": "rune/rend/d",
+                "skillCalcId": "Z",
+                "order": 1
+            }
+        }, {
+            "skill": {
+                "slug": "whirlwind",
+                "name": "Whirlwind",
+                "icon": "barbarian_whirlwind",
+                "level": 20,
+                "categorySlug": "secondary",
+                "tooltipUrl": "skill/barbarian/whirlwind",
+                "description": "Cost: 10 Fury\r\n\r\nDeliver multiple attacks to everything in your path for 340% weapon damage.\r\n\r\nWhile whirlwinding, you move at 100% movement speed.",
+                "simpleDescription": "Cost: 10 Fury\r\n\r\nUnleash a series of whirling attacks damaging everything in your path.",
+                "skillCalcId": "h"
+            },
+            "rune": {
+                "slug": "whirlwind-d",
+                "type": "d",
+                "name": "Wind Shear",
+                "level": 44,
+                "description": "Gain 1 Fury for every enemy struck.\r\n\r\nWhirlwind's damage turns into Lightning.",
+                "simpleDescription": "Gain Fury for every enemy struck.",
+                "tooltipParams": "rune/whirlwind/d",
+                "skillCalcId": "Y",
+                "order": 3
+            }
+        }, {
+            "skill": {
+                "slug": "wrath-of-the-berserker",
+                "name": "Wrath of the Berserker",
+                "icon": "barbarian_wrathoftheberserker",
+                "level": 30,
+                "categorySlug": "rage",
+                "tooltipUrl": "skill/barbarian/wrath-of-the-berserker",
+                "description": "Cooldown: 120 seconds\r\n\r\nEnter a berserker rage which raises several attributes for 20 seconds.\r\n\r\n Critical Hit Chance: 10%\r\n Attack Speed: 25%\r\n Dodge Chance: 20%\r\n Movement Speed: 20%",
+                "simpleDescription": "Cooldown: 120 seconds\r\n\r\nBecome Fury incarnate for 20 seconds.",
+                "skillCalcId": "P"
+            },
+            "rune": {
+                "slug": "wrath-of-the-berserker-d",
+                "type": "d",
+                "name": "Thrive on Chaos",
+                "level": 60,
+                "description": "While active, gain 5364 Life per Fury spent.",
+                "simpleDescription": "While active, gain Life per Fury spent.",
+                "tooltipParams": "rune/wrath-of-the-berserker/d",
+                "skillCalcId": "c",
+                "order": 4
+            }
+        }],
+        "passive": [{
+            "skill": {
+                "slug": "ruthless",
+                "name": "Ruthless",
+                "icon": "barbarian_passive_ruthless",
+                "level": 10,
+                "tooltipUrl": "skill/barbarian/ruthless",
+                "description": "You deal 40% additional damage to enemies below 30% health.",
+                "flavor": "The clans each paint their warriors in their own unique way. Some celebrate the mountain, others honor the fire, but the Targos clan worships the purifying virtue of pain.",
+                "skillCalcId": "Z"
+            }
+        }, {
+            "skill": {
+                "slug": "bloodthirst",
+                "name": "Bloodthirst",
+                "icon": "barbarian_passive_bloodthirst",
+                "level": 24,
+                "tooltipUrl": "skill/barbarian/bloodthirst",
+                "description": "Each point of Fury spent heals you for 966 Life.\r\n\r\nHeal amount is increased by 1% of your Health Globe Healing Bonus.",
+                "flavor": "\"Compassion is weakness. To press the advantage when an opponent calls for mercy is the way of true power.\" —Halaberd the Conqueror",
+                "skillCalcId": "d"
+            }
+        }, {
+            "skill": {
+                "slug": "weapons-master",
+                "name": "Weapons Master",
+                "icon": "barbarian_passive_weaponsmaster",
+                "level": 16,
+                "tooltipUrl": "skill/barbarian/weapons-master",
+                "description": "Gain a bonus based on the weapon type of your main hand weapon:\r\nSwords/Daggers: 8% increased damage\r\nMaces/Axes: 5% Critical Hit Chance\r\nPolearms/Spears: 8% attack speed\r\nMighty Weapons: 2 Fury per hit",
+                "flavor": "\"My men ambushed the traveler in the woods, but it was we who were surprised. Such keen senses, swift motions, flawless strikes. We never stood a chance.\" —Redjack the Bandit",
+                "skillCalcId": "Y"
+            }
+        }, {}]
+    },
+    "items": {
+        "neck": {
+            "id": "Amulet12",
+            "name": "Vile Burden",
+            "icon": "amulet12_demonhunter_male",
+            "displayColor": "yellow",
+            "tooltipParams": "item/CkYIxv6yyAkSBwgEFavFRGQd9mpQXx2-baHAHYnEFu8dlkYMvR2gbLMUHaxsf_0iCwgAFar-AQAYMCAaMAk4mANAAFAQYKYDGNaWpsQMUAJYAA"
+        },
+        "rightFinger": {
+            "id": "Unique_Ring_017_104",
+            "name": "Oculus Ring",
+            "icon": "unique_ring_017_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CjkIuqLX8gMSBwgEFbFaJ-AdNmeUuh3nSCF8HawuMEwd4TZwMx2RqGXGHbJX1e4wCTiQA0AAUBJgngMYnZXF_QNQAlgA"
+        },
+        "waist": {
+            "id": "Unique_BarbBelt_009_104",
+            "name": "Immortal King's Tribal Binding",
+            "icon": "unique_barbbelt_009_104_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/CjkI_ZnLkw8SBwgEFSBhFhod3Ubxtx3D_4LlHYEurikdW06AyR2gbLMUHape7nUwCTjHAkAAUBJg1QIYwISzoQNQAlgAoAHAhLOhA6AB6JDL4QOgAaLBx74N",
+            "setItemsEquipped": ["Unique_Chest_013_104", "Unique_Gloves_008_104", "Unique_BarbBelt_009_104"]
+        },
+        "leftFinger": {
+            "id": "Unique_Ring_014_104",
+            "name": "The Wailing Host",
+            "icon": "unique_ring_014_104_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/CjkIlr7brw8SBwgEFS4R8d8dHhdaox0NUt2sHYG1PowdBn2WQR2RqGXGHZRRsqowCTiMA0AAUBJgmgMYo7v3gARQAlgAoAGju_eABA",
+            "setItemsEquipped": ["Unique_Ring_014_104"]
+        },
+        "mainHand": {
+            "id": "Unique_Axe_2H_009_104",
+            "name": "Skorn",
+            "icon": "unique_axe_2h_009_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CmMInOSpoQQSBwgEFdltpAwdkA22qR2GAmPqHdILi94d_SftZR1Vum3gHee-mnEwCTjKAkAAUBJg2AJqKAoMCAAQsozD4IWAgMAKEhgI8ezJ2gcSBwgEFWP1i18wDTgAQAGQAQAYsrejygFQAlgA"
+        },
+        "torso": {
+            "id": "Unique_Chest_013_104",
+            "name": "Immortal King's Eternal Reign",
+            "icon": "unique_chest_013_104_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/CrMBCMuT_5IPEgcIBBU0ZBkeHcJqmxEd3iVSyx0o_n0BHZMCY-odiL6-IR1bToDJMAk47QJAAFASYPsCaigKDAgAEKGMw-CFgIDAChIYCKLGn6sIEgcIBBVJ9YtfMAk4AEABkAEAaigKDAgAEKKMw-CFgIDAChIYCKCdlL4EEgcIBBVJ9YtfMAk4AEABkAEAaiQKDAgAEKOMw-CFgIDAChIUCAASBwgEFfae2KswCTgAQAGQAQAY6JDL4QNQAlgAoAHAhLOhA6AB6JDL4QOgAaLBx74N",
+            "setItemsEquipped": ["Unique_Chest_013_104", "Unique_Gloves_008_104", "Unique_BarbBelt_009_104"]
+        },
+        "feet": {
+            "id": "Unique_Boots_007_104",
+            "name": "Fire Walkers",
+            "icon": "unique_boots_007_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CjkI0qaRyA8SBwgEFWdWgugdzJyAJx3eeuBMHdVmipQdccID4B2RqGXGHQrqUAgwCTjYAkAAUBJg5gIYsabt9wJQAlgA"
+        },
+        "hands": {
+            "id": "Unique_Gloves_008_104",
+            "name": "Immortal King's Irons",
+            "icon": "unique_gloves_008_104_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/CjkIhc2d6QsSBwgEFVHw6GsdnSkOiB3I0vNlHdZmipQdDmt__R3SXcJLHcJqmxEwCTj_AUAAUBJgjQIYosHHvg1QAlgAoAHAhLOhA6AB6JDL4QOgAaLBx74N",
+            "setItemsEquipped": ["Unique_Chest_013_104", "Unique_Gloves_008_104", "Unique_BarbBelt_009_104"]
+        },
+        "shoulders": {
+            "id": "Unique_Shoulder_003_104",
+            "name": "Vile Ward",
+            "icon": "unique_shoulder_003_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CjkIwN6h5AcSBwgEFaJwVPEdoIETrh0hhz5WHdJdwksdwmqbER0o_n0BHVtOgMkwCTjDAkAAUBJgxAIYu73c6gFQAlgA"
+        },
+        "legs": {
+            "id": "Unique_Pants_006_104",
+            "name": "Depth Diggers",
+            "icon": "unique_pants_006_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CjkIg5mBigwSBwgEFWXy9gwdtvHsGh2_iD5WHVtOgMkdnC4Lfx3SXcJLHV_xYwQwCTilAkAAUBJgswIYysm3zwFQAlgA"
+        },
+        "bracers": {
+            "id": "Unique_Bracer_007_104",
+            "name": "Strongarm Bracers",
+            "icon": "unique_bracer_007_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CjgIkMaQaxIHCAQVj_AiGB2yV9XuHR7313wdD2h9Sh3nSCF8HZGoZcYdBn2WQTAJOJYCQABQEmCkAhiewpeCA1ACWAA"
+        },
+        "head": {
+            "id": "Unique_Helm_006_104",
+            "name": "Mempo of Twilight",
+            "icon": "unique_helm_006_104_demonhunter_male",
+            "displayColor": "orange",
+            "tooltipParams": "item/CmMIx_jTtg4SBwgEFYUioZEdltXDnR1bToDJHYYCY-oddbHs8B3SXcJLHYf1e24wCTiRA0AAUBJgnwNqKAoMCAAQq4zD4IWAgMAKEhgI0qS_kwESBwgEFUn1i18wCTgAQAGQAQAY9fX25Q1QAlgA"
+        }
+    },
+    "followers": {
+        "templar": {
+            "slug": "templar",
+            "level": 60,
+            "items": {
+                "neck": {
+                    "id": "Unique_Amulet_004_104",
+                    "name": "Xephirian Amulet",
+                    "icon": "unique_amulet_004_104_demonhunter_male",
+                    "displayColor": "orange",
+                    "tooltipParams": "item/CjkI8bCIyggSBwgEFcXKD7wdnGyzFB0SVtXuHTFPRZIdWaiuix2ORA9yHcSf_7YwCTjJAkAAUBJgyQIY9dSBvwg"
+                },
+                "rightFinger": {
+                    "id": "Unique_Ring_013_104",
+                    "name": "The Compass Rose",
+                    "icon": "unique_ring_013_104_demonhunter_male",
+                    "displayColor": "green",
+                    "tooltipParams": "item/CjkI3pmLwg4SBwgEFa343t8dh_V7bh25votuHWjcCvEdgbU-jB0K6lAIHawuMEwwCTiCA0AAUBJgggMYpZ2IggSgAaWdiIIE",
+                    "setItemsEquipped": ["Unique_Ring_013_104"]
+                },
+                "leftFinger": {
+                    "id": "Ring_23",
+                    "name": "Keen Lantern",
+                    "icon": "ring_23_demonhunter_male",
+                    "displayColor": "yellow",
+                    "tooltipParams": "item/CjwI3o_NiwESBwgEFTRVXUQddbHs8B29CvBMHY-8lrcdrC4wTCILCAAVrv4BABgcIBQwCTj2AkAAUAxg9gIY6NTqxQg"
+                },
+                "offHand": {
+                    "id": "Shield_205_104",
+                    "name": "Juggernaut Method",
+                    "icon": "shield_205_104_demonhunter_male",
+                    "displayColor": "yellow",
+                    "tooltipParams": "item/CjwIobDtrgcSBwgEFWNqJewd3wjtdR2sbH_9HUw99GkdzGx7gyILCAEVwEQDABgUIB4wCTiLBUAAUAxgiwUYudbUvQI"
+                },
+                "mainHand": {
+                    "id": "Mace_1H_205",
+                    "name": "Black Judge",
+                    "icon": "mace_1h_205_demonhunter_male",
+                    "displayColor": "yellow",
+                    "tooltipParams": "item/CkYI6rCrtwISBwgEFUQUS50dFz3kZB01jVNgHfof7U8dtvHsGh0e5d21HdyQjBQiCwgAFav-AQAYDiAEMAk42gRAAFAQYNoEGPeup6sM"
+                },
+                "special": {
+                    "id": "Templar_Special_204",
+                    "name": "Grim Focus",
+                    "icon": "templar_special_204_demonhunter_male",
+                    "displayColor": "yellow",
+                    "tooltipParams": "item/Cj0Is5W-wQMSBwgEFeoLY0QdnGyzFB3Qw0esHaRHeJ0dVKiuix09pFAHIgsIABW0_gEAGBYgFjAJOABAAFAOGNSvmMYI"
+                }
+            },
+            "stats": {
+                "experienceBonus": 0,
+                "goldFind": 8,
+                "magicFind": 15
+            },
+            "skills": [{
+                "skill": {
+                    "slug": "intervene",
+                    "name": "Intervene",
+                    "icon": "templar_intervene",
+                    "level": 5,
+                    "tooltipUrl": "skill/templar/intervene",
+                    "description": "Cooldown: 10 seconds\r\n\r\nTaunt enemies within 10 yards of you for 3 seconds when you are hit.",
+                    "simpleDescription": "Cooldown: 10 seconds\r\n\r\nTaunt enemies near you when you are hit.",
+                    "skillCalcId": "Z"
+                }
+            }, {
+                "skill": {
+                    "slug": "loyalty",
+                    "name": "Loyalty",
+                    "icon": "templar_loyalty",
+                    "level": 10,
+                    "tooltipUrl": "skill/templar/loyalty",
+                    "description": "Regenerates 6437 Life per second for you and the Templar.",
+                    "simpleDescription": "Provides Life regeneration for you and the Templar.",
+                    "skillCalcId": "b"
+                }
+            }, {
+                "skill": {
+                    "slug": "charge",
+                    "name": "Charge",
+                    "icon": "templar_shieldcharge",
+                    "level": 15,
+                    "tooltipUrl": "skill/templar/charge",
+                    "description": "Cooldown: 10 seconds\r\n\r\nCharges a target, dealing 280% weapon damage and stunning all enemies within 8 yards for 3 seconds.",
+                    "simpleDescription": "Cooldown: 10 seconds\r\n\r\nCharges an enemy, dealing damage and stunning nearby enemies.",
+                    "skillCalcId": "c"
+                }
+            }, {
+                "skill": {
+                    "slug": "guardian",
+                    "name": "Guardian",
+                    "icon": "templar_guardian",
+                    "level": 20,
+                    "tooltipUrl": "skill/templar/guardian",
+                    "description": "Cooldown: 30 seconds\r\n\r\nRush to your aid, knocking back enemies within 15 yards and healing you for 182383 Life.",
+                    "simpleDescription": "Cooldown: 30 seconds\r\n\r\nWhen your Life is low, the Templar will come to your aid, knocking back nearby enemies and healing you.",
+                    "skillCalcId": "W"
+                }
+            }]
+        },
+        "scoundrel": {
+            "slug": "scoundrel",
+            "level": 60,
+            "items": {
+                "neck": {
+                    "id": "Amulet03",
+                    "name": "Keen Amulet",
+                    "icon": "amulet03_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/CiAI2v3-xw4SBwgEFYvFRGQdMCcdVjAJOIoDQABQBmCKAxiWlqbEDA"
+                },
+                "mainHand": {
+                    "id": "Crossbow_001",
+                    "name": "Light Crossbow of Slaying",
+                    "icon": "crossbow_001_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/CiAIvsT6og8SBwgEFYJTygodR5uKMjAJOIwEQABQBmCMBBiEztKsAQ"
+                },
+                "special": {
+                    "id": "Scoundrel_Special_001",
+                    "name": "Dice of the Leech",
+                    "icon": "scoundrel_special_001_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/ChwIg4jn_AYSBwgEFR_5S_IdmZGEHjAJOABAAFAGGMGboNsB"
+                }
+            },
+            "stats": {
+                "experienceBonus": 0,
+                "goldFind": 0,
+                "magicFind": 0
+            },
+            "skills": [{
+                "skill": {
+                    "slug": "poison-bolts",
+                    "name": "Poison Bolts",
+                    "icon": "scoundrel_poisonarrow",
+                    "level": 5,
+                    "tooltipUrl": "skill/scoundrel/poison-bolts",
+                    "description": "Cooldown: 3 seconds\r\n\r\nRanged attack that deals 320% weapon damage and an additional 100% weapon damage as Poison over 3 seconds.",
+                    "simpleDescription": "Cooldown: 3 seconds\r\n\r\nShoots a deadly poisoned bolt.",
+                    "skillCalcId": "Z"
+                }
+            }, {
+                "skill": {
+                    "slug": "dirty-fighting",
+                    "name": "Dirty Fighting",
+                    "icon": "scoundrel_dirtyfighting",
+                    "level": 10,
+                    "tooltipUrl": "skill/scoundrel/dirty-fighting",
+                    "description": "Cooldown: 6 seconds\r\n\r\nBlinds nearby enemies in front of the Scoundrel for 2 seconds.",
+                    "simpleDescription": "Cooldown: 6 seconds\r\n\r\nBlinds nearby enemies in front of the Scoundrel.",
+                    "skillCalcId": "b"
+                }
+            }, {
+                "skill": {
+                    "slug": "powered-shot",
+                    "name": "Powered Shot",
+                    "icon": "scoundrel_powershot",
+                    "level": 15,
+                    "tooltipUrl": "skill/scoundrel/powered-shot",
+                    "description": "Cooldown: 8 seconds\r\n\r\nRanged attack that explodes on impact, dealing 310% weapon damage as Arcane to enemies within 10 yards and has a 100% chance to Stun enemies for 2 seconds.",
+                    "simpleDescription": "Cooldown: 8 seconds\r\n\r\nDeals damage in an area that has a chance to Stun enemies.",
+                    "skillCalcId": "c"
+                }
+            }, {
+                "skill": {
+                    "slug": "hysteria",
+                    "name": "Hysteria",
+                    "icon": "scoundrel_hysteria",
+                    "level": 20,
+                    "tooltipUrl": "skill/scoundrel/hysteria",
+                    "description": "Whenever you or the Scoundrel land a Critical Hit, you both will go into hysterics, increasing all damage done by 3% for 3 seconds.",
+                    "simpleDescription": "Critical Hits cause you and the Scoundrel to temporarily deal more damage.",
+                    "skillCalcId": "d"
+                }
+            }]
+        },
+        "enchantress": {
+            "slug": "enchantress",
+            "level": 60,
+            "items": {
+                "neck": {
+                    "id": "Amulet03",
+                    "name": "Amulet of Focus",
+                    "icon": "amulet03_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/CiAI1LGFowQSBwgEFYvFRGQdYVCqBzAJOKwDQABQBmCsAxiWlqbEDA"
+                },
+                "rightFinger": {
+                    "id": "Ring_03",
+                    "name": "Reptilian Ring",
+                    "icon": "ring_03_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/Ch8IxYjhehIHCAQV8lRdRB1K-PXiMAk4lQNAAFAGYOkDGOTT6sUI"
+                },
+                "leftFinger": {
+                    "id": "Ring_03",
+                    "name": "Scouting Ring",
+                    "icon": "ring_03_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/CiAI4ciMmgMSBwgEFfJUXUQdzY-crjAJOKUEQABQBmClBBjk0-rFCA"
+                },
+                "mainHand": {
+                    "id": "Staff_004",
+                    "name": "Magistrate's Passage",
+                    "icon": "staff_004_demonhunter_male",
+                    "displayColor": "yellow",
+                    "tooltipParams": "item/CjwI-_f7owESBwgEFacc5YEdzYj3DR2eI7xIHY6wzNAdKxVOqiILCAEVckIDABgGIAgwCTiDBEAAUAxggwQYsY3X4Q8"
+                },
+                "special": {
+                    "id": "Enchantress_Special_001",
+                    "name": "Mirror of Slaughter",
+                    "icon": "enchantress_special_001_demonhunter_male",
+                    "displayColor": "blue",
+                    "tooltipParams": "item/ChwIh4WerwoSBwgEFa6aYi0d_0NfoDAJOABAAFAGGNzqlNYF"
+                }
+            },
+            "stats": {
+                "experienceBonus": 2,
+                "goldFind": 0,
+                "magicFind": 1
+            },
+            "skills": [{
+                "skill": {
+                    "slug": "forceful-push",
+                    "name": "Forceful Push",
+                    "icon": "enchantress_forcefulpush",
+                    "level": 15,
+                    "tooltipUrl": "skill/enchantress/forceful-push",
+                    "description": "Cooldown: 5 seconds\r\n\r\nSummon an Arcane explosion 8 yards around an enemy, dealing 410% weapon damage as Arcane and knocking back all monsters caught within it.",
+                    "simpleDescription": "Cooldown: 5 seconds\r\n\r\nCreates an explosion that deals massive damage and knocks back enemies.",
+                    "skillCalcId": "Z"
+                }
+            }, {
+                "skill": {
+                    "slug": "powered-armor",
+                    "name": "Powered Armor",
+                    "icon": "enchantress_poweredarmor",
+                    "level": 20,
+                    "tooltipUrl": "skill/enchantress/powered-armor",
+                    "description": "Buffs you and the Enchantress, increasing Armor by 3% and slowing melee attackers by 60% for 1 seconds.",
+                    "simpleDescription": "Increases Armor and slows melee attackers for you and the Enchantress.",
+                    "skillCalcId": "Y"
+                }
+            }, {
+                "skill": {
+                    "slug": "erosion",
+                    "name": "Erosion",
+                    "icon": "enchantress_scorchedearth",
+                    "level": 25,
+                    "tooltipUrl": "skill/enchantress/erosion",
+                    "description": "Cooldown: 15 seconds\r\n\r\nConjures a pool of energy that deals 330% weapon damage as Arcane over 5 seconds. Affected enemies will also take 3% increased damage.",
+                    "simpleDescription": "Cooldown: 15 seconds\r\n\r\nConjures a pool of energy that deals damage and causes affected enemies to take additional damage.",
+                    "skillCalcId": "X"
+                }
+            }, {
+                "skill": {
+                    "slug": "mass-control",
+                    "name": "Mass Control",
+                    "icon": "enchantress_masscharm",
+                    "level": 30,
+                    "tooltipUrl": "skill/enchantress/mass-control",
+                    "description": "Cooldown: 18 seconds\r\n\r\nLob a bulb of magical energy that hexes enemies in an area into chickens for 5 seconds.",
+                    "simpleDescription": "Cooldown: 18 seconds\r\n\r\nHexes a nearby group of enemies.",
+                    "skillCalcId": "W"
+                }
+            }]
+        }
+    },
+    "legendaryPowers": [],
+    "stats": {
+        "life": 35149,
+        "damage": 66741.9,
+        "toughness": 345357.0,
+        "healing": 2098.88,
+        "attackSpeed": 1.0,
+        "armor": 7018,
+        "strength": 2499,
+        "dexterity": 585,
+        "vitality": 829,
+        "intelligence": 93,
+        "physicalResist": 616,
+        "fireResist": 744,
+        "coldResist": 576,
+        "lightningResist": 603,
+        "poisonResist": 576,
+        "arcaneResist": 576,
+        "critDamage": 2.94,
+        "blockChance": 0.0,
+        "blockAmountMin": 0,
+        "blockAmountMax": 0,
+        "damageIncrease": 0.0,
+        "critChance": 0.30000000075,
+        "damageReduction": 0.0,
+        "lifeSteal": 0.028,
+        "lifePerKill": 305.0,
+        "goldFind": 0.20999999999999996,
+        "magicFind": 0.38,
+        "thorns": 0.0,
+        "lifeOnHit": 640.0,
+        "primaryResource": 113,
+        "secondaryResource": 0
+    },
+    "progression": {
+        "act3": {
+            "completed": true,
+            "completedQuests": [{
+                "slug": "the-siege-of-bastions-keep",
+                "name": "The Siege of Bastion's Keep"
+            }, {
+                "slug": "turning-the-tide",
+                "name": "Turning the Tide"
+            }, {
+                "slug": "the-breached-keep",
+                "name": "The Breached Keep"
+            }, {
+                "slug": "tremors-in-the-stone",
+                "name": "Tremors in the Stone"
+            }, {
+                "slug": "machines-of-war",
+                "name": "Machines of War"
+            }, {
+                "slug": "siegebreaker",
+                "name": "Siegebreaker"
+            }, {
+                "slug": "heart-of-sin",
+                "name": "Heart of Sin"
+            }]
+        },
+        "act4": {
+            "completed": true,
+            "completedQuests": [{
+                "slug": "fall-of-the-high-heavens",
+                "name": "Fall of the High Heavens"
+            }, {
+                "slug": "the-light-of-hope",
+                "name": "The Light of Hope"
+            }, {
+                "slug": "beneath-the-spire",
+                "name": "Beneath the Spire"
+            }, {
+                "slug": "prime-evil",
+                "name": "Prime Evil"
+            }]
+        },
+        "act1": {
+            "completed": true,
+            "completedQuests": [{
+                "slug": "the-fallen-star",
+                "name": "The Fallen Star"
+            }, {
+                "slug": "the-legacy-of-cain",
+                "name": "The Legacy of Cain"
+            }, {
+                "slug": "a-shattered-crown",
+                "name": "A Shattered Crown"
+            }, {
+                "slug": "reign-of-the-black-king",
+                "name": "Reign of the Black King"
+            }, {
+                "slug": "sword-of-the-stranger",
+                "name": "Sword of the Stranger"
+            }, {
+                "slug": "the-broken-blade",
+                "name": "The Broken Blade"
+            }, {
+                "slug": "the-doom-in-wortham",
+                "name": "The Doom in Wortham"
+            }, {
+                "slug": "trailing-the-coven",
+                "name": "Trailing the Coven"
+            }, {
+                "slug": "the-imprisoned-angel",
+                "name": "The Imprisoned Angel"
+            }, {
+                "slug": "return-to-new-tristram",
+                "name": "Return to New Tristram"
+            }]
+        },
+        "act2": {
+            "completed": true,
+            "completedQuests": [{
+                "slug": "shadows-in-the-desert",
+                "name": "Shadows in the Desert"
+            }, {
+                "slug": "the-road-to-alcarnus",
+                "name": "The Road to Alcarnus"
+            }, {
+                "slug": "city-of-blood",
+                "name": "City of Blood"
+            }, {
+                "slug": "a-royal-audience",
+                "name": "A Royal Audience"
+            }, {
+                "slug": "unexpected-allies",
+                "name": "Unexpected Allies"
+            }, {
+                "slug": "betrayer-of-the-horadrim",
+                "name": "Betrayer of the Horadrim"
+            }, {
+                "slug": "blood-and-sand",
+                "name": "Blood and Sand"
+            }, {
+                "slug": "the-black-soulstone",
+                "name": "The Black Soulstone"
+            }, {
+                "slug": "the-scouring-of-caldeum",
+                "name": "The Scouring of Caldeum"
+            }, {
+                "slug": "lord-of-lies",
+                "name": "Lord of Lies"
+            }]
+        },
+        "act5": {
+            "completed": false,
+            "completedQuests": []
+        }
+    },
+    "dead": false,
+    "last-updated": 1498629466
+}

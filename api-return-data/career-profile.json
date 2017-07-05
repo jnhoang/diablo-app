@@ -1,0 +1,256 @@
+{
+    "battleTag": "Toothonius#1398",
+    "paragonLevel": 12,
+    "paragonLevelHardcore": 0,
+    "paragonLevelSeason": 0,
+    "paragonLevelSeasonHardcore": 0,
+    "guildName": "",
+    "heroes": [{
+        "id": 90575649,
+        "name": "Astreyarch",
+        "class": "barbarian",
+        "gender": 0,
+        "level": 60,
+        "kills": {
+            "elites": 1939
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1498629466
+    }, {
+        "id": 90575645,
+        "name": "Erebos",
+        "class": "demon-hunter",
+        "gender": 1,
+        "level": 60,
+        "kills": {
+            "elites": 1470
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1499039587
+    }, {
+        "id": 90575646,
+        "name": "ChoedanKal",
+        "class": "wizard",
+        "gender": 0,
+        "level": 22,
+        "kills": {
+            "elites": 207
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1498629466
+    }, {
+        "id": 90575648,
+        "name": "Zarafree",
+        "class": "witch-doctor",
+        "gender": 1,
+        "level": 15,
+        "kills": {
+            "elites": 51
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1498629466
+    }, {
+        "id": 90575647,
+        "name": "Eador",
+        "class": "witch-doctor",
+        "gender": 0,
+        "level": 15,
+        "kills": {
+            "elites": 37
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1498629466
+    }, {
+        "id": 91201004,
+        "name": "Aldamin",
+        "class": "demon-hunter",
+        "gender": 0,
+        "level": 6,
+        "kills": {
+            "elites": 8
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1499116836
+    }, {
+        "id": 90575644,
+        "name": "Erenor",
+        "class": "monk",
+        "gender": 1,
+        "level": 4,
+        "kills": {
+            "elites": 0
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1498629465
+    }, {
+        "id": 91200729,
+        "name": "Iodin",
+        "class": "crusader",
+        "gender": 0,
+        "level": 1,
+        "kills": {
+            "elites": 0
+        },
+        "paragonLevel": 12,
+        "hardcore": false,
+        "seasonal": false,
+        "dead": false,
+        "last-updated": 1499049941
+    }],
+    "lastHeroPlayed": 91201004,
+    "lastUpdated": 1499116836,
+    "kills": {
+        "monsters": 76767,
+        "elites": 3749,
+        "hardcoreMonsters": 0
+    },
+    "highestHardcoreLevel": 0,
+    "timePlayed": {
+        "barbarian": 1.0,
+        "crusader": 0.0,
+        "demon-hunter": 0.609,
+        "monk": 0.004,
+        "necromancer": 0.0,
+        "witch-doctor": 0.109,
+        "wizard": 0.125
+    },
+    "progression": {
+        "act1": true,
+        "act2": true,
+        "act3": true,
+        "act4": true,
+        "act5": false
+    },
+    "fallenHeroes": [],
+    "blacksmith": {
+        "slug": "blacksmith",
+        "level": 10,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "jeweler": {
+        "slug": "jeweler",
+        "level": 10,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "mystic": {
+        "slug": "mystic",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "blacksmithHardcore": {
+        "slug": "blacksmith",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "jewelerHardcore": {
+        "slug": "jeweler",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "mysticHardcore": {
+        "slug": "mystic",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "blacksmithSeasonHardcore": {
+        "slug": "blacksmith",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "jewelerSeasonHardcore": {
+        "slug": "jeweler",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "mysticSeasonHardcore": {
+        "slug": "mystic",
+        "level": 0,
+        "stepCurrent": 0,
+        "stepMax": 1
+    },
+    "seasonalProfiles": {
+        "season1": {
+            "seasonId": 1,
+            "paragonLevel": 0,
+            "paragonLevelHardcore": 0,
+            "kills": {
+                "monsters": 820,
+                "elites": 37,
+                "hardcoreMonsters": 0
+            },
+            "timePlayed": {
+                "barbarian": 0.0,
+                "crusader": 0.0,
+                "demon-hunter": 0.0,
+                "monk": 0.0,
+                "necromancer": 0.0,
+                "witch-doctor": 1.0,
+                "wizard": 0.0
+            },
+            "highestHardcoreLevel": 0,
+            "progression": {
+                "act1": false,
+                "act2": false,
+                "act3": false,
+                "act4": false,
+                "act5": false
+            }
+        },
+        "season0": {
+            "seasonId": 0,
+            "paragonLevel": 12,
+            "paragonLevelHardcore": 0,
+            "kills": {
+                "monsters": 75947,
+                "elites": 3712,
+                "hardcoreMonsters": 0
+            },
+            "timePlayed": {
+                "barbarian": 1.0,
+                "crusader": 0.0,
+                "demon-hunter": 0.609,
+                "monk": 0.004,
+                "necromancer": 0.0,
+                "witch-doctor": 0.08,
+                "wizard": 0.125
+            },
+            "highestHardcoreLevel": 0,
+            "progression": {
+                "act1": true,
+                "act2": true,
+                "act3": true,
+                "act4": true,
+                "act5": false
+            }
+        }
+    }
+}
