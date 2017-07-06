@@ -2,7 +2,7 @@ import React, {Component}     from 'react';
 import ActiveSkill            from './components/ActiveSkill';
 import BasicInfo              from './components/BasicInfo';
 import Stats                  from './components/Stats';
-
+import Follower from './components/Follower';
 
 class Char extends Component {
   constructor(props) {
@@ -47,14 +47,14 @@ class Char extends Component {
             <Stats data={char.stats} />
             
             <h1>Skill section</h1>
-            { char.skills.active.map( (skill, idx) => <ActiveSkill data={skill} key={idx} /> )}
+            { char.skills.active.map( (skill) => <ActiveSkill data={skill} key={skill.skill.slug} /> )}
             <p>passive skills go here</p>
 
             
             <h1>Item Section</h1>
 
             <h1>followers Section</h1>
-            {this.state.followers ? this.state.followers[0].slug : null}
+            {this.state.followers.map((follower) => <Follower data={follower} key={follower.slug} />)}
           </div>
         }
       </div>
