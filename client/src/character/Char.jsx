@@ -1,39 +1,45 @@
 import React, {Component} from 'react';
+import ActiveSkill from './components/ActiveSkill';
 
 class Char extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      charData: null
+      charData   : null
+    , charItems  : null
     };
   }
   componentDidMount() {
     let acctInfo =  window.location.pathname;
-    console.log(acctInfo);
 
     fetch(`/api${acctInfo}`)
-    .then( (data) => data.json())
+    .then( (data) => data.json() )
     .then( (json) => this.setState({charData: json.data}) )
     .catch( (err) => console.log(err) );
   }
 
   render() {
-    let charData = this.state.charData;
-
+    let char = this.state.charData;
+    let items = []
     return (
       <div>
-      {charData &&
-        <div>
-          <h1>Basic Info</h1>
-          <p>{charData.name}</p>
-          <p>{charData.class}</p>
-          <p>{charData.level}</p>
-          <p>{charData.gender === 0 ? "Male" : "Female"}</p>
-          <p>{char.paragonLevel}</p>
-        </div>
-      }
-        <h1>Skill section</h1>
+        {char &&
+          <div>
+            <h1>Basic Info</h1>
+            <p>{char.name}</p>
+            <p>{char.class}</p>
+            <p>{char.level}</p>
+            <p>{char.gender === 0 ? "Male" : "Female"}</p>
+            <p>{char.paragonLevel}</p>
+          </div>
+        }
+        {char && 
+          <div>
+            <h1>Skill section</h1>
+            {char.skills.active.map( (skill, idx) => <ActiveSkill data={skill} key={idx} /> )}
+          </div>
+        }
 
         <h1>Item Section</h1>
 
