@@ -2,7 +2,8 @@ import React from 'react';
 
 function ActiveSkill(props) {
   let skill = props.data.skill;
-  console.log(skill)
+  let rune  = props.data.rune;
+
   return (
     <div>
       <h1>Skill</h1>
@@ -15,6 +16,11 @@ function ActiveSkill(props) {
       <p>simpleDescription  : {skill.simpleDescription}</p>
 
       <h1>Rune</h1>
+      <h2>{rune.name}</h2>
+      <p>name: {rune.name}</p>
+      <p>gained at level: {rune.level}</p>
+      <p>description: {rune.description}</p>
+      <p>tooltip params: {rune.tooltipParams}</p>
     </div>
   );
 }
