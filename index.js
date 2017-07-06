@@ -21,7 +21,7 @@ const requestParams = {
 
 
 // get account info
-app.get('/account', function(req, res) {
+app.get('/api/account', function(req, res) {
   const deferred  = q.defer();
   //let battleTag   = req.query.tag;
   let reqParams   = requestParams;
@@ -41,24 +41,24 @@ app.get('/account', function(req, res) {
 });
 
 // get single char info
-app.get('/character', function(req, res) {
+app.get('/api/character/:battleTag/:charId', function(req, res) {
   const deferred  = q.defer();
-  let battleTag   = req.query.tag;
-  let charName    = req.query.charId;
+  let battleTag   = req.params.battleTag;
+  let charId      = req.params.charId;
   let reqParams   = requestParams;
   reqParams.url   = 'https://us.api.battle.net/d3/profile/' + battleTag + '/hero/' + charId
   
   rp(reqParams)
   .then(function(data) {
-    console.log(data);
-    deferred.resolve(data);
+    console.log(data.name);
+    deferred.resolve(res.send({data: data}));
   })
   .catch(function(err) {
     console.log('error in get single char',err);
     deferred.reject(err);
   });
 
-  return deffered.promise;
+  return deferred.promise;
 });
 
 const port = process.env.PORT || 9001;

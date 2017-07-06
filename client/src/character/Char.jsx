@@ -5,12 +5,24 @@ class Char extends Component {
     super(props);
 
     this.state = {
-
+      charData: null
     };
   }
+  componentDidMount() {
+    let acctInfo =  window.location.pathname
+    console.log(acctInfo)
+
+    fetch(`/api${acctInfo}`)
+    .then( (data) => data.json())
+    .then( (json) => this.setState({charData: json.data}) )
+    .catch( (err) => console.log(err) );
+  }
+
   render() {
     return (
-      <h1>TEST</h1>
+      <div>
+        <h1>TEST</h1>
+      </div>
     );
   }
 }

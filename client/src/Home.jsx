@@ -10,7 +10,7 @@ class Home extends Component {
     };
   } 
   componentDidMount() {
-	  fetch('/account')
+	  fetch('/api/account')
 	  .then(  (data) => data.json() )
 	  .then(  (json) => this.setState({ acctInfo: json.data }) )
 	  .catch( (err)  => console.log(err) );
@@ -21,7 +21,7 @@ class Home extends Component {
     return (
       <div>
         <h1>{info ? info.battleTag : "Loading" }</h1>
-        <div>{ info ? info.heroes.map( (hero, idx) => <Hero hero={hero} key={idx} /> ) : null }</div>
+        <div>{ info ? info.heroes.map( (hero, idx) => <Hero hero={hero} key={idx} acct={info.battleTag} /> ) : null }</div>
       </div>
 		);
 	}

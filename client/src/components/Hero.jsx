@@ -2,13 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 function Hero(props) {
+  let hero = props.hero;
+  let battleTag = props.acct.replace('#', '-');
   return (
     <div>
-      <p>id: {props.hero.id}</p>
-      <Link to={ "/character/" + props.hero.id}>{props.hero.name}</Link>
-      <p>class: {props.hero.class}</p>
-      <p>gender: {props.hero.gender === 0 ? "male" : "female"}</p>
-      <p>paragon level: {props.hero.paragonLevel}</p>
+      <Link to={`/character/${battleTag}/${hero.id}`}>{hero.name}</Link>
+      <p>class: {hero.class}</p>
+      <p>gender: {hero.gender === 0 ? "male" : "female"}</p>
+      <p>paragon level: {hero.paragonLevel}</p>
     </div>
   );
 }
