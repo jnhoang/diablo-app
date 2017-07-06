@@ -1,5 +1,8 @@
-import React, {Component} from 'react';
-import ActiveSkill from './components/ActiveSkill';
+import React, {Component}     from 'react';
+import ActiveSkill            from './components/ActiveSkill';
+import BasicInfo              from './components/BasicInfo';
+import Stats                  from './components/Stats';
+
 
 class Char extends Component {
   constructor(props) {
@@ -7,6 +10,7 @@ class Char extends Component {
 
     this.state = {
       charData   : null
+    , followers  : null
     , charItems  : null
     };
   }
@@ -15,40 +19,57 @@ class Char extends Component {
 
     fetch(`/api${acctInfo}`)
     .then( (data) => data.json() )
-    .then( (json) => this.setState({charData: json.data}) )
+    .then( (json) => {
+      
+      // Copy follower data into Arr
+      let followersArr = formatObjToArr(json.data.followers);
+      
+      this.setState({
+        charData: json.data
+      , followers: followersArr
+      });
+    })
     .catch( (err) => console.log(err) );
   }
 
   render() {
     let char = this.state.charData;
-    let items = []
+    
     return (
       <div>
-        {char &&
+        {!char ? <h1>Loading</h1> : 
           <div>
-            <h1>Basic Info</h1>
-            <p>{char.name}</p>
-            <p>{char.class}</p>
-            <p>{char.level}</p>
-            <p>{char.gender === 0 ? "Male" : "Female"}</p>
-            <p>{char.paragonLevel}</p>
-          </div>
-        }
-        {char && 
-          <div>
+            <h1>Progression to go here</h1>
+            
+            <BasicInfo data={char} />
+           
+            <h1>Stat section</h1>
+            <Stats data={char.stats} />
+            
             <h1>Skill section</h1>
-            {char.skills.active.map( (skill, idx) => <ActiveSkill data={skill} key={idx} /> )}
+            { char.skills.active.map( (skill, idx) => <ActiveSkill data={skill} key={idx} /> )}
+            <p>passive skills go here</p>
+
+            
+            <h1>Item Section</h1>
+
+            <h1>followers Section</h1>
+            {this.state.followers ? this.state.followers[0].slug : null}
           </div>
         }
-
-        <h1>Item Section</h1>
-
-        <h1>followers Section</h1>
-
-        <h1>Stat section</h1>
       </div>
     );
   }
 }
 
 export default Char;
+
+function formatObjToArr(obj) {
+  let retArr = [];
+
+  for (let person in obj) {
+    retArr.push(obj[person]);
+  }
+
+  return retArr;
+}
