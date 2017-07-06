@@ -50,7 +50,6 @@ app.get('/api/character/:battleTag/:charId', function(req, res) {
   
   rp(reqParams)
   .then(function(data) {
-    console.log(data.name);
     deferred.resolve(res.send({data: data}));
   })
   .catch(function(err) {
