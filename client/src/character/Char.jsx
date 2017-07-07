@@ -1,8 +1,9 @@
 import React, {Component}     from 'react';
 import ActiveSkill            from './components/ActiveSkill';
 import BasicInfo              from './components/BasicInfo';
+import Follower               from './components/Follower';
+import PassiveSkill           from './components/PassiveSkill';
 import Stats                  from './components/Stats';
-import Follower from './components/Follower';
 
 class Char extends Component {
   constructor(props) {
@@ -23,7 +24,9 @@ class Char extends Component {
       
       // Copy follower data into Arr
       let followersArr = formatObjToArr(json.data.followers);
-      
+      json.data.skills.passive = json.data.skills.passive.filter( (skill) => JSON.stringify(skill) !== '{}' );
+      json.data.skills.active  = json.data.skills.active.filter(  (skill) => JSON.stringify(skill) !== '{}' );
+      console.log(json.data.skills.passive);
       this.setState({
         charData: json.data
       , followers: followersArr
@@ -40,16 +43,13 @@ class Char extends Component {
         {!char ? <h1>Loading</h1> : 
           <div>
             <h1>Progression to go here</h1>
-            
+            <h1>{char.skills.passive[0].skill.name}</h1>
             <BasicInfo data={char} />
-           
-            <h1>Stat section</h1>
             <Stats data={char.stats} />
             
             <h1>Skill section</h1>
-            { char.skills.active.map( (skill) => <ActiveSkill data={skill} key={skill.skill.slug} /> )}
-            <p>passive skills go here</p>
-
+            { char.skills.active.map(  (skill) => <ActiveSkill  data={skill} key={skill.skill.slug} /> )}
+            { char.skills.passive.map( (skill) => <PassiveSkill data={skill} key={skill.skill.name} /> )}
             
             <h1>Item Section</h1>
 
@@ -67,8 +67,8 @@ export default Char;
 function formatObjToArr(obj) {
   let retArr = [];
 
-  for (let person in obj) {
-    retArr.push(obj[person]);
+  for (let item in obj) {
+    retArr.push(obj[item]);
   }
 
   return retArr;

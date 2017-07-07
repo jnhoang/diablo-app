@@ -13,7 +13,7 @@ class Home extends Component {
 	  fetch('/api/account')
 	  .then(  (data) => data.json() )
 	  .then(  (json) => this.setState({ acctInfo: json.data }) )
-	  .catch( (err)  => console.log(err) );
+	  .catch( (err ) => console.log(err) );
 	}
 	render() {
     let info = this.state.acctInfo;

@@ -5,6 +5,7 @@ function Stats(props) {
 
   return (
     <div>
+      <h1>Stats section</h1>
       <p>life           : {stats.life}</p>
       <p>damage         : {stats.damage}</p>
       <p>toughness      : {stats.toughness}</p>
