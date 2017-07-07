@@ -2,7 +2,7 @@ import React from 'react';
 
 function PassiveSkills(props) {
   let skill = props.data.skill;
-  console.log(skill);
+
   return (
     <div>
       <h2>{skill.name}</h2>

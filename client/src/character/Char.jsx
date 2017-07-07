@@ -24,9 +24,11 @@ class Char extends Component {
       
       // Copy follower data into Arr
       let followersArr = formatObjToArr(json.data.followers);
+
+      // filter empty skills
       json.data.skills.passive = json.data.skills.passive.filter( (skill) => JSON.stringify(skill) !== '{}' );
       json.data.skills.active  = json.data.skills.active.filter(  (skill) => JSON.stringify(skill) !== '{}' );
-      console.log(json.data.skills.passive);
+
       this.setState({
         charData: json.data
       , followers: followersArr
@@ -43,18 +45,18 @@ class Char extends Component {
         {!char ? <h1>Loading</h1> : 
           <div>
             <h1>Progression to go here</h1>
-            <h1>{char.skills.passive[0].skill.name}</h1>
+
             <BasicInfo data={char} />
             <Stats data={char.stats} />
             
             <h1>Skill section</h1>
             { char.skills.active.map(  (skill) => <ActiveSkill  data={skill} key={skill.skill.slug} /> )}
-            { char.skills.passive.map( (skill) => <PassiveSkill data={skill} key={skill.skill.name} /> )}
+            { char.skills.passive.map( (skill) => <PassiveSkill data={skill} key={skill.skill.slug} /> )}
             
             <h1>Item Section</h1>
 
             <h1>followers Section</h1>
-            {this.state.followers.map((follower) => <Follower data={follower} key={follower.slug} />)}
+            { this.state.followers.map( (follower) => <Follower data={follower} key={follower.slug} /> )}
           </div>
         }
       </div>

@@ -3,7 +3,7 @@ import React from 'react';
 function ActiveSkill(props) {
   let skill = props.data.skill;
   let rune  = props.data.rune;
-  console.log(rune)
+
   return (
     <div>
       {skill &&
