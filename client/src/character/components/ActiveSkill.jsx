@@ -1,4 +1,5 @@
-import React from 'react';
+import React       from 'react';
+import PropTypes   from 'prop-types';
 
 function ActiveSkill(props) {
   let skill = props.data.skill;
@@ -30,5 +31,25 @@ function ActiveSkill(props) {
     </div>
   );
 }
+
+ActiveSkill.propTypes = {
+  data: PropTypes.shape({
+      skill: PropTypes.shape({
+        icon               : PropTypes.string 
+      , level              : PropTypes.number 
+      , categorySlug       : PropTypes.string 
+      , toolTipUrl         : PropTypes.string 
+      , description        : PropTypes.string 
+      , simpleDescription  : PropTypes.string 
+      }).isRequired
+      
+    , rune: PropTypes.shape({
+        name            : PropTypes.string 
+      , level           : PropTypes.number 
+      , description     : PropTypes.string 
+      , tooltipParams   : PropTypes.string 
+    }).isRequired
+  })
+};
 
 export default ActiveSkill;

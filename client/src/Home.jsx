@@ -6,7 +6,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      acctInfo: ''
+      acctInfo: null
     , battleTag: ''
     };
   } 
@@ -24,7 +24,6 @@ class Home extends Component {
     
     return (
       <div>
-
         <input 
           type="text"
           value={this.state.formInput}
@@ -33,12 +32,13 @@ class Home extends Component {
         <button onClick={ () => this.handleSubmit() }>Find</button>
 
         {this.state.battleTag ? null : this.state.battleTag}
+        
         {!info ? <h1>Loading</h1> :
           <div>
             <h1>{info.battleTag}</h1>
             <div>{info.heroes.map( (hero, idx) => <Hero hero={hero} key={idx} acct={info.battleTag} /> )}</div>
           </div>
-        }
+        } 
       </div>
 		);
 	}
