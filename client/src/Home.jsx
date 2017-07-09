@@ -7,19 +7,32 @@ class Home extends Component {
 
     this.state = {
       acctInfo: ''
+    , battleTag: ''
     };
   } 
-  componentDidMount() {
-	  fetch('/api/account')
+  handleInput(e) {
+    this.setState({ battleTag: e.target.value });
+  }
+  handleSubmit() {
+	  fetch(`/api/account/${this.state.battleTag}`)
 	  .then(  (data) => data.json() )
 	  .then(  (json) => this.setState({ acctInfo: json.data }) )
 	  .catch( (err ) => console.log(err) );
-	}
+  }
 	render() {
     let info = this.state.acctInfo;
     
     return (
       <div>
+
+        <input 
+          type="text"
+          value={this.state.formInput}
+          onChange={ (e) => this.handleInput(e) } 
+        />
+        <button onClick={ () => this.handleSubmit() }>Find</button>
+
+        {this.state.battleTag ? null : this.state.battleTag}
         {!info ? <h1>Loading</h1> :
           <div>
             <h1>{info.battleTag}</h1>

@@ -21,9 +21,9 @@ const requestParams = {
 
 
 // get account info
-app.get('/api/account', function(req, res) {
+app.get('/api/account/:battleTag', function(req, res) {
   const deferred  = q.defer();
-  //let battleTag   = req.query.tag;
+  let battleTag   = req.params.battleTag;
   let reqParams   = requestParams;
   reqParams.url   = 'https://us.api.battle.net/d3/profile/' + battleTag + '/';
   

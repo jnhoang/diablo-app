@@ -151,7 +151,8 @@
                 "order": 4
             }
         }],
-        "passive": [{
+        "passive": [
+            {
             "skill": {
                 "slug": "ruthless",
                 "name": "Ruthless",
