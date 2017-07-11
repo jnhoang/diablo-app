@@ -34,20 +34,20 @@ function ActiveSkill(props) {
 
 ActiveSkill.propTypes = {
   data: PropTypes.shape({
-      skill: PropTypes.shape({
-        icon               : PropTypes.string 
-      , level              : PropTypes.number 
-      , categorySlug       : PropTypes.string 
-      , toolTipUrl         : PropTypes.string 
-      , description        : PropTypes.string 
-      , simpleDescription  : PropTypes.string 
-      }).isRequired
-      
-    , rune: PropTypes.shape({
-        name            : PropTypes.string 
-      , level           : PropTypes.number 
-      , description     : PropTypes.string 
-      , tooltipParams   : PropTypes.string 
+    skill: PropTypes.shape({
+      icon               : PropTypes.string 
+    , level              : PropTypes.number 
+    , categorySlug       : PropTypes.string 
+    , toolTipUrl         : PropTypes.string 
+    , description        : PropTypes.string 
+    , simpleDescription  : PropTypes.string 
+    }).isRequired
+    
+  , rune: PropTypes.shape({
+      name            : PropTypes.string 
+    , level           : PropTypes.number 
+    , description     : PropTypes.string 
+    , tooltipParams   : PropTypes.string 
     }).isRequired
   })
 };

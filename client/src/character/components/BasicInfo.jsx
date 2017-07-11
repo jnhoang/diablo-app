@@ -1,7 +1,9 @@
-import React from 'react';
+import React          from 'react';
+import PropTypes      from 'prop-types';
 
 function basicInfo(props) {
   let char = props.data;
+  
   return (
     <div>
       <h1>Basic Info</h1>
@@ -12,6 +14,16 @@ function basicInfo(props) {
       <p>{char.paragonLevel}</p>
     </div>
   );
+}
+
+BasicInfo.propTypes = {
+  data: {
+    name           : PropTypes.string
+  , class          : PropTypes.string
+  , level          : PropTypes.number
+  , gender         : PropTypes.number
+  , paragonLevel   : PropTypes.number
+  }.isRequired
 }
 
 export default basicInfo;
