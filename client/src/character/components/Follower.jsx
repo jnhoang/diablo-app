@@ -1,4 +1,5 @@
-import React from 'react';
+import React       from 'react';
+import PropTypes   from 'prop-types';
 
 function Follower(props) {
   let follower = props.data;
@@ -9,8 +10,14 @@ function Follower(props) {
       <p>name   : {follower.slug}</p>
       <p>level  : {follower.level}</p>
     </div>
-
   );
 } 
+
+Follower.propTypes = {
+  data: {
+    slug    : PropTypes.string
+  , level   : PropTypes.number
+  }
+}
 
 export default Follower;

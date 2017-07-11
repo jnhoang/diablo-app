@@ -1,5 +1,5 @@
-import React          from 'react';
-import PropTypes      from 'prop-types';
+import React       from 'react';
+import PropTypes   from 'prop-types';
 
 function basicInfo(props) {
   let char = props.data;
