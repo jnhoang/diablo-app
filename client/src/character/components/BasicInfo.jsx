@@ -1,7 +1,7 @@
 import React       from 'react';
 import PropTypes   from 'prop-types';
 
-function basicInfo(props) {
+function BasicInfo(props) {
   let char = props.data;
   
   return (
@@ -26,4 +26,4 @@ BasicInfo.propTypes = {
   }.isRequired
 }
 
-export default basicInfo;
+export default BasicInfo;

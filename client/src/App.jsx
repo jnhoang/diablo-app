@@ -4,8 +4,7 @@ import {
 , Route
 } from 'react-router-dom';
 
-import './App.css';
-import Home from './Home';
+import Home from './home/Home';
 import Char from './character/Char';
 
 class App extends Component {

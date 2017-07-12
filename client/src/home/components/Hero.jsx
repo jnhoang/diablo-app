@@ -7,9 +7,10 @@ function Hero(props) {
   
   return (
     <div>
+      <div className="class-portrait"></div>
       <Link to={`/character/${ battleTag }/${ hero.id }`}>{hero.name}</Link>
       <p>class          : {hero.class}</p>
-      <p>gender         : {hero.gender === 0 ? "male"  : "female"}</p>
+      <p>gender         : {hero.gender === 0 ? "male" : "female"}</p>
       <p>level          : {hero.level}</p>
       <p>paragon level  : {hero.paragonLevel}</p>
     </div>
