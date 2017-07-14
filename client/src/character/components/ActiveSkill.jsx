@@ -4,18 +4,21 @@ import PropTypes   from 'prop-types';
 function ActiveSkill(props) {
   let skill   = props.data.skill;
   let rune    = props.data.rune;
-  let imgSrc  = `http://media.blizzard.com/d3/icons/skills/64/${skill.icon}.png`
+  let imgSrc  = `http://media.blizzard.com/d3/icons/skills/64/${skill.icon}.png`;
 
   return (
     <div>
       {skill &&
-        <div>
+        <div className="skill-box">
           <h2>{skill.name}</h2>
-          <img src={imgSrc} alt="skill"/>
+          <div className="skill-midbox">
+            <img src={imgSrc} alt="skill"/>
+            <p> {skill.description}</p>
+          </div>
+
           <p>gained at level    : {skill.level}</p>
           <p>category           : {skill.categorySlug}</p>
           <p>tooltipURL         : {skill.tooltipUrl}</p>
-          <p>description        : {skill.description}</p>
           <p>simpleDescription  : {skill.simpleDescription}</p>
         </div>
       }

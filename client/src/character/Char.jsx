@@ -7,6 +7,8 @@ import Items                  from './components/Items';
 import PassiveSkill           from './components/PassiveSkill';
 import Stats                  from './components/Stats';
 
+import './Char.css';
+
 class Char extends Component {
   constructor(props) {
     super(props);

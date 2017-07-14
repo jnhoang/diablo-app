@@ -1,0 +1,15 @@
+.skill-box {
+
+  display:          inline-block;
+  align-items:      flex-start;
+  justify-content:  space-between;
+  flex-direction:   column;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.skill-midbox {
+  display: flex;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
