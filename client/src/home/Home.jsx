@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import Hero                  from './components/Hero';
 
-import './Home.css';
+import './Home.css'
 
 class Home extends Component {
 	constructor(props) {

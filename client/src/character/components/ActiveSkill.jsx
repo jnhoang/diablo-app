@@ -2,15 +2,16 @@ import React       from 'react';
 import PropTypes   from 'prop-types';
 
 function ActiveSkill(props) {
-  let skill = props.data.skill;
-  let rune  = props.data.rune;
+  let skill   = props.data.skill;
+  let rune    = props.data.rune;
+  let imgSrc  = `http://media.blizzard.com/d3/icons/skills/64/${skill.icon}.png`
 
   return (
     <div>
       {skill &&
         <div>
           <h2>{skill.name}</h2>
-          <p>icon               : {skill.icon}</p>
+          <img src={imgSrc} alt="skill"/>
           <p>gained at level    : {skill.level}</p>
           <p>category           : {skill.categorySlug}</p>
           <p>tooltipURL         : {skill.tooltipUrl}</p>
