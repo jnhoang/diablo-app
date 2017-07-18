@@ -14,8 +14,8 @@ class Char extends Component {
     super(props);
 
     this.state = {
-      charData   : null
-    , followers  : null
+      charData        : null
+    , followers       : null
     };
   }
   componentDidMount() {
@@ -41,16 +41,16 @@ class Char extends Component {
   }
 
   render() {
-    let char = this.state.charData;
+    let char  = this.state.charData;
     
     return (
       <div>
-        { !char ? <h1>Loading</h1> : 
+        { !char ? <p>Loading</p> : 
           <div>
             <h1>Progression to go here</h1>
 
-            <BasicInfo data={char} />
-            <Stats data={char.stats} />
+            <BasicInfo  data={char} />
+            <Stats      data={char.stats} />
             
             <h1>Skill section</h1>
             { char.skills.active.map(  (skill) => <ActiveSkill  data={skill} key={skill.skill.slug} /> )}

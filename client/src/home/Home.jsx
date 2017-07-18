@@ -9,7 +9,7 @@ class Home extends Component {
 
     this.state = {
       acctInfo: null
-    , battleTag: ''
+    , battleTag: 'Enter your battleTag'
     };
   } 
   handleInput(e) {
@@ -35,7 +35,7 @@ class Home extends Component {
 
         {this.state.battleTag ? null : this.state.battleTag}
         
-        {!info ? <h1>Loading</h1> :
+        {!info ? null :
           <div>
             <h1>{info.battleTag}</h1>
             <div>{info.heroes.map( (hero, idx) => <Hero hero={hero} key={idx} acct={info.battleTag} /> )}</div>
