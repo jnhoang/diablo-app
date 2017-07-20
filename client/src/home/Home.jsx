@@ -11,11 +11,10 @@ class Home extends Component {
       acctInfo: null
     , battleTag: 'Enter your battleTag'
     };
-  } 
-  handleInput(e) {
-    this.setState({ battleTag: e.target.value });
   }
-  handleSubmit() {
+
+  handleInput  = (e) => this.setState({ battleTag: e.target.value })
+  handleSubmit = ( ) => {
 	  fetch(`/api/account/${this.state.battleTag}`)
 	  .then(  (data) => data.json() )
 	  .then(  (json) => this.setState({ acctInfo: json.data }) )
@@ -29,9 +28,9 @@ class Home extends Component {
         <input 
           type="text"
           value={this.state.formInput}
-          onChange={ (e) => this.handleInput(e) } 
+          onChange={this.handleInput} 
         />
-        <button onClick={ () => this.handleSubmit() }>Find</button>
+        <button onClick={this.handleSubmit}>Find</button>
 
         {this.state.battleTag ? null : this.state.battleTag}
         

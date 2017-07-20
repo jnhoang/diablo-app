@@ -10,7 +10,7 @@ function ActiveSkill(props) {
     <div>
       {skill &&
         <div className="skill-box">
-          <h2 className="text-center">{skill.name}</h2>
+          <h2  className="text-center">{skill.name}</h2>
           <div className="skill-midbox">
             <img src={imgSrc} alt="skill"/>
             <p> {skill.description}</p>

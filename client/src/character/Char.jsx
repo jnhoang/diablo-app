@@ -1,11 +1,11 @@
-import React, {Component}     from 'react';
+import React, {Component}  from 'react';
 
-import ActiveSkill            from './components/ActiveSkill';
-import BasicInfo              from './components/BasicInfo';
-import Follower               from './components/Follower';
-import Items                  from './components/Items';
-import PassiveSkill           from './components/PassiveSkill';
-import Stats                  from './components/Stats';
+import ActiveSkill         from './components/ActiveSkill';
+import BasicInfo           from './components/BasicInfo';
+import Follower            from './components/Follower';
+import Items               from './components/Items';
+import PassiveSkill        from './components/PassiveSkill';
+import Stats               from './components/Stats';
 
 import './Char.css';
 
