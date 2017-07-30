@@ -1,5 +1,6 @@
 import React, {Component}  from 'react';
 
+import Loading             from '../components/Loading';
 import ActiveSkill         from './components/ActiveSkill';
 import BasicInfo           from './components/BasicInfo';
 import Follower            from './components/Follower';
@@ -45,7 +46,7 @@ class Char extends Component {
     
     return (
       <div>
-        { !char ? <p>Loading</p> : 
+        { !char ? <Loading text={'hi, I\'m loading'} speed={200} /> : 
           <div>
             <h1>Progression to go here</h1>
 

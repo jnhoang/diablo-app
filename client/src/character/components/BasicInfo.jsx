@@ -1,7 +1,19 @@
 import React       from 'react';
 import PropTypes   from 'prop-types';
 
+
+BasicInfo.propTypes = {
+  data: PropTypes.shape({
+    name           : PropTypes.string
+  , class          : PropTypes.string
+  , level          : PropTypes.number
+  , gender         : PropTypes.number
+  , paragonLevel   : PropTypes.number
+  })
+}
+
 function BasicInfo(props) {
+
   let char = props.data;
   
   return (
@@ -16,14 +28,7 @@ function BasicInfo(props) {
   );
 }
 
-BasicInfo.propTypes = {
-  data: {
-    name           : PropTypes.string
-  , class          : PropTypes.string
-  , level          : PropTypes.number
-  , gender         : PropTypes.number
-  , paragonLevel   : PropTypes.number
-  }.isRequired
-}
+
+
 
 export default BasicInfo;

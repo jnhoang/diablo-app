@@ -8,8 +8,8 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      acctInfo: null
-    , battleTag: 'Enter your battleTag'
+      acctInfo    : null
+    , battleTag   : 'Enter your battleTag'
     };
   }
 

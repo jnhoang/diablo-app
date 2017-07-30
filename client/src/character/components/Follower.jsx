@@ -14,10 +14,10 @@ function Follower(props) {
 } 
 
 Follower.propTypes = {
-  data: {
+  data: PropTypes.shape({
     slug    : PropTypes.string
   , level   : PropTypes.number
-  }
+  })
 }
 
 export default Follower;
